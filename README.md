@@ -1,15 +1,16 @@
-# go-hn
+# vedm
 
-`go-hn` is a hacker news client for the terminal.  There's not much to this program code-wise, but this was a another happy surprise from GO as the XML parsing worked the first time.
+`vedm` is a vedomosti.ru news client for the terminal.  There's not much to this program code-wise, but this was a another happy surprise from GO as the XML parsing worked the first time.
 
-Quick install: `go get github.com/sspencer/go-hn`
+Quick install: `go get github.com/awsom82/vedm`
 
 ## Features
 
-* Grabs latest hacker news headlines from the Hacker News [RSS Feed](https://news.ycombinator.com/rss) and displays them in the terminal
-* Opens desired article in default browser
+* Grabs latest Vedomosti.ru headlines from the [RSS Feed](http://www.vedomosti.ru/rss/news) and displays them in the terminal
+* Shows news text in terminal
+* You get unlimited access to read latest news for free
 
-![Hacker News Terminal](screenshot.png?raw=true "Hacker News Terminal Screenshot")
+![Vedomosti Terminal](screenshot.png?raw=true "Vedomosti Terminal Screenshot")
 
 ## Dependencies
 
@@ -18,29 +19,11 @@ Quick install: `go get github.com/sspencer/go-hn`
 
 ## Setup
 
-* Install the `go-hn` binary into your $GOPATH with `go get github.com/sspencer/go-hn`
-* Invoked `go-hn` (assuming go/bin is in your path)
-* If you prefer an executable named `hn` or just want to play and reinstall the code, make sure `$GOBIN` is set, `cd $GOPATH/src/github.com/sspencer/go-hn` and type `go install hn.go`.
+* Install the `vedm` binary into your $GOPATH with `go get github.com/awsom82/vedm`
+* Invoked `vedm` (assuming go/bin is in your path)
+* If you prefer an executable named `vedm` or just want to play and reinstall the code, make sure `$GOBIN` is set, `cd $GOPATH/src/github.com/awsom82/vedm` and type `go install vedm.go`.
 
-## Parsing XML
+## Why
+Project made for golang learning and made easy reading not bad news paper for free for everyone.
 
-GO makes it SO easy!  Just define a few types and away you GO.
-
-    type Item struct {
-        Title string `xml:"title"`
-        Link  string `xml:"link"`
-    }
-
-    type Channel struct {
-        Items []Item `xml:"item"`
-    }
-
-    type Result struct {
-        Channel Channel `xml:"channel"`
-    }
-
-    body, err := ioutil.ReadAll(resp.Body)
-    ...
-    var v Result
-    err = xml.Unmarshal(body, &v)
-
+Enjoy!
