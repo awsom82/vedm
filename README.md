@@ -23,7 +23,7 @@ Quick install: `go get github.com/awsom82/vedm`
 * Invoked `vedm` (assuming go/bin is in your path)
 * If you prefer an executable named `vedm` or just want to play and reinstall the code, make sure `$GOBIN` is set, `cd $GOPATH/src/github.com/awsom82/vedm` and type `go install vedm.go`.
 
-## Why
-Project made for golang learning and made easy reading not bad news paper for free for everyone.
+## Why?
+Project made for golang learning and made easy reading not bad news paper for free to everyone.
 
 Enjoy!
