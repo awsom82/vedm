@@ -10,15 +10,15 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/fatih/color"
 	"github.com/PuerkitoBio/goquery"
+	"github.com/fatih/color"
 	"github.com/mitchellh/go-wordwrap"
 )
 
 type Item struct {
-	Title string `xml:"title"`
-	Link  string `xml:"link"`
-	Caption string `xml:"description"`
+	Title    string `xml:"title"`
+	Link     string `xml:"link"`
+	Caption  string `xml:"description"`
 	Category string `xml:"category"`
 }
 
@@ -64,20 +64,20 @@ func displayRSS(items []Item) {
 }
 
 func getArticle(url string) string {
-  doc, err := goquery.NewDocument(url) 
-  if err != nil {
-    log.Fatal(err)
-  }
+	doc, err := goquery.NewDocument(url)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-  var para string = ""
+	var para string = ""
 
-  doc.Find(".b-document_news").Each(func(i int, s *goquery.Selection) {
-    
-    para = s.Find("p").Text()
+	doc.Find(".b-document_news").Each(func(i int, s *goquery.Selection) {
 
-  })
+		para = s.Find("p").Text()
 
-  return wordwrap.WrapString(para, 120)
+	})
+
+	return wordwrap.WrapString(para, 120)
 
 }
 
@@ -124,7 +124,7 @@ func main() {
 		}
 
 		i = bound(i, 1, len(items))
-		fmt.Printf("%-9s\n", getArticle(items[i-1].Link)) 
+		fmt.Printf("%s\n", getArticle(items[i-1].Link))
 
 		fmt.Println()
 
