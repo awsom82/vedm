@@ -1,7 +1,9 @@
 # vedm
 
-`vedm` is a vedomosti.ru news client for the terminal. 
-Project made for golang learning AND to give all posibility to read good newspaper for free.
+`vedm` is a vedomosti.ru news client for the terminal.
+
+Project made for golang learning and
+to give all posibility to read good newspaper for free.
 
 Enjoy it!
 
