@@ -1,4 +1,5 @@
 # vedm
+[![Build Status](https://travis-ci.org/awsom82/vedm.svg?branch=master)](https://travis-ci.org/awsom82/vedm)
 
 `vedm` is a vedomosti.ru news client for the terminal.
 
